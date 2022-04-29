@@ -1,0 +1,32 @@
+﻿@model List<MVCÖrnek.Models.Product>
+<!--buradaki model veriyi çekmek için kullandığım yapı-->
+<ul>
+    @*@foreach (var products in Model)
+        {
+          <li>
+              @products.ProductName
+
+          </li>
+        }*@
+       <h3>VIEWBAG</h3>
+    @*Dinamik olarak verimni taşıdım -viewbag-*@
+    @foreach (var products in ViewBag.products as List<MVCÖrnek.Models.Product>)
+    {
+        <li>
+            @products.ProductName
+        </li>
+
+    }
+</ul>
+       <h3>VIEWDATA</h3>
+     <ul>
+      @foreach (var products in ViewData["products"] as List<MVCÖrnek.Models.Product>)
+      {
+         <li>
+           @products.ProductName
+          </li>
+
+      }
+      </ul>
+
+    

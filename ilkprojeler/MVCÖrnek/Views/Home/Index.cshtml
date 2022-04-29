@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@*URL HELPER -- HTML HELPER -- TAG HELPER*@
+
+@*URL HELPER  --> Adından anlaşılacağı gibi URL İşlemlerinde bizlere yardımcı olur.(Link oluşumu vb.) *@
+@*URL HELPER  -->Methodlar (Action, ActionLink,Content,RouteURL) ---Propertyler (ActionContext) *@
+
+@*--------------------------Örnek--------------------------*@
+
+<div class="text-center">
+    <h1 class="display-4">BU BİR URL.ÖRNEĞİDİR</h1>
+    <a href="@Url.Action("GetProducts", "Product")">Tıkla ve Nereye Geçiş Yapıyor İncele </a>
+</div>
+
+@*--------------------------Örnek--------------------------*@
+@* @Url.Action ("GetProduct","Product)"*@
+@* @Url.ActionLink("GetProduct","Product",new{id=5}*@
+@* @Url.Content("~/site.css") *@
+@* @UrlActionContext;*@
+
+@*HTML HELPERS ---> Yardımcı Metodlar barındırır, cshtml dosyalarının render edilmesini sağlar.*@
+@*HTML HELPERS ---> Contexte Dair Bilgiler Verir, Veri Taşıma Kontrollerine Erişim Sağlar.*@
+@*HTML HELPERS ---> Metodlar (html.Partial,Html.RenderPartial,Html.ActionLink, Html.Form metodları.)*@
+@*HTML HELPERS ---> Properties (ViewContext,TempData,ViewData,ViewBag)*@
+

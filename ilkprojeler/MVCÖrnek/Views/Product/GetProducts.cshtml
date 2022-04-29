@@ -1,0 +1,75 @@
+﻿@using MVCÖrnek.Extensions
+
+@addTagHelper* ,Microsoft.AspNetCore.Mvc.TagHalpers
+
+@*@model MVCÖrnek.Models.ViewModels.CustomerProduct
+
+
+    <h3>@Model.Product.ProductName</h3>
+    <h3>@Model.Customer.Name</h3>
+*@
+
+@{
+    ViewData["Title"] = "GetProducts";
+}
+
+<h1>GetProducts</h1>
+@Html.Partial("~/Views/Product/Parials/ListPartial.cshtml")
+
+@*
+    @{Html.RenderPartial("~/Views/Product/Parials/ListPartial")}
+    @{Html.Action("Anasayfa","Index","Home")}--->Anasayfa yazacak home'un indexine gidecek'
+
+    ------------o---------------------o---------------------o------------------o------------------o
+    HTML FORM METODLARI
+
+    Kullanıcıyla etkileşime girmemizi sağlayan form ve input nesneler oluşturmamızı sağlayan metotlardır.
+
+    @Html.BeginForm()
+    @Html.CheckBox("cb")
+    @Html.TextBox("txt")
+    @Html.ValidationMessage("vldt")
+
+    <form - action="/product/getproducks" method ="post">
+
+    <input id ="txt" name="txt" type="text" value>
+    ......
+    </form>
+
+
+*@
+
+@Html.TextBox("txtName", null, new {style="background-color:blue; color:white;"})
+
+@Html.CustomTextBox("txtCustomName",null,"Your Name:")
+
+@*Html.Helper örneği*@
+@*
+    Html helperların yerine gelen yeni yapılandırmalardır.İçeirisinde bir kütüphane barındırırılar.
+*@
+
+<form asp-action="Index" asp-controller="Product" method="post">
+
+    <input type="text"/> 
+    <select>
+        <option value="value">Seçenek</option>
+    </select>
+</form>
+
+@*
+
+    CACHE TAGHELPER
+    <cache>
+    Cache:@DateTime.Now
+    </cache>
+
+    @DateTime.Now
+    
+*@
+
+@*---------------------------------------------------PARTİALTAG HELPER-------------------------------------------
+    
+    <partial name="~/Views/Product/Partials/ListPartial.cshtml">
+    
+    
+    *@
